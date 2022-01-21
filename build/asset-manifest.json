@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ZombixMapGT/static/js/main.64ff2e0c.js",
+    "main.js": "/ZombixMapGT/static/js/main.de22487e.js",
     "index.html": "/ZombixMapGT/index.html",
-    "main.64ff2e0c.js.map": "/ZombixMapGT/static/js/main.64ff2e0c.js.map"
+    "main.de22487e.js.map": "/ZombixMapGT/static/js/main.de22487e.js.map"
   },
   "entrypoints": [
-    "static/js/main.64ff2e0c.js"
+    "static/js/main.de22487e.js"
   ]
 }

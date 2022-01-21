@@ -1,6 +1,9 @@
 const styles = theme => ({
     list: {
-        background: 'red'
+        background: 'red',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     }
 })
 
