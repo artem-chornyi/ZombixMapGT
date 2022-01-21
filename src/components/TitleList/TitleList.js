@@ -31,7 +31,7 @@ const TitleList = () => {
         console.log(Date.now() );
     }
     const onClick2 = () => {
-        console.log(1642718941617 + 180000 + 33000);
+        console.log(1642776926759 + 600000 + 32000);
     }
 
 

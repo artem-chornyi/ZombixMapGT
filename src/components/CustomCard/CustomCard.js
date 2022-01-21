@@ -70,7 +70,7 @@ const CustomCard = props => {
     const timeLeft = finTime - currentTime;
 
     const className = () => (
-        300000 > (timeLeft) ? classes.red : classes.green
+        300000 > timeLeft ? 120000 > timeLeft ? classes.red : classes.yellow : classes.green
     );
 
     date.filterTime = timeLeft ;
@@ -83,7 +83,7 @@ const CustomCard = props => {
             Время обновления { new Date(finTime).toString().slice(15, 25) }
             <br/>
             <span>
-                Осталось до начисления <span className={ className() }>{ update }</span>
+                Осталось до начисления <span className={ className() }> { update } </span>
             </span>
         </div>
     )

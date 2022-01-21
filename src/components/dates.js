@@ -1,4 +1,4 @@
-const error = 3000;
+const error = 2500;
 const timeToUpdate = 1800000;
 
 const dates = [
@@ -55,7 +55,7 @@ const dates = [
         id: 8,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 1642719164583,
+        timeAdd: 1642719164583 + 1000,
         filterTime: 0,
     },
     {
@@ -69,20 +69,21 @@ const dates = [
         id: 10,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642776105964,
+        filterTime: 0,
     },
     {
         id: 11,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775285201,
         filterTime: 0,
     },
     {
         id: 12,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775075473,
         filterTime: 0,
     },
     {
@@ -131,21 +132,21 @@ const dates = [
         id: 19,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775255575,
         filterTime: 0,
     },
     {
         id: 20,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775115578,
         filterTime: 0,
     },
     {
         id: 21,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775355811,
         filterTime: 0,
     },
     {
@@ -187,7 +188,7 @@ const dates = [
         id: 27,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642773643702,
         filterTime: 0,
     },
     {
@@ -215,7 +216,7 @@ const dates = [
         id: 31,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777057629,
         filterTime: 0,
     },
     {
@@ -236,14 +237,14 @@ const dates = [
         id: 34,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775205183 - 2000,
         filterTime: 0,
     },
     {
         id: 35,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777017071,
         filterTime: 0,
     },
     {
@@ -257,7 +258,7 @@ const dates = [
         id: 37,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777558759,
         filterTime: 0,
     },
     {
@@ -285,7 +286,7 @@ const dates = [
         id: 41,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777097226,
         filterTime: 0,
     },
     {
@@ -313,7 +314,7 @@ const dates = [
         id: 45,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777047109,
         filterTime: 0,
     },
     {
@@ -348,7 +349,7 @@ const dates = [
         id: 50,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777067864,
         filterTime: 0,
     },
     {
@@ -362,14 +363,14 @@ const dates = [
         id: 52,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642778199731,
         filterTime: 0,
     },
     {
         id: 53,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642776977059,
     },
     {
         id: 54,
@@ -424,7 +425,7 @@ const dates = [
         id: 61,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642775355330,
         filterTime: 0,
     },
     {
@@ -438,7 +439,7 @@ const dates = [
         id: 63,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642773932960,
         filterTime: 0,
     },
     {
@@ -458,7 +459,8 @@ const dates = [
         id: 66,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777158169,
+        filterTime: 0,
     },
     {
         id: 67,
@@ -478,7 +480,7 @@ const dates = [
         id: 69,
         timeUpdate: timeToUpdate,
         error: error,
-        timeAdd: 0,
+        timeAdd: 1642777127451,
         filterTime: 0,
     },
 ];
