@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { CustomCard, Clock } from '..';
 import dates from '../dates';
+import styles from './styles';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => styles(theme));
 
 
 
 const TitleList = () => {
-    const newDate = new Date();
+    const classes = useStyles();
+
     const list = () => {
         return dates.map(date => {
             if (date.timeAdd > 0) {
@@ -26,7 +31,7 @@ const TitleList = () => {
     }
 
     return (
-        <div>
+        <div className={ classes.list }>
             <Clock/>
             <button onClick={ onClick } >
                 test
