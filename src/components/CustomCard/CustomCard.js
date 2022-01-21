@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import styles from './styles';
+import { makeStyles } from '@material-ui/core/styles';
+
 function formatDuration (s) {
     if(s===0)return 'now'
     // Complete this functionfunction seconds(s){
@@ -23,7 +26,10 @@ function formatDuration (s) {
   result.pop()}
   return result.join(', ').trim()}
 
+const useStyles = makeStyles(theme => styles(theme));
+
 const CustomCard = props => {
+    const classes = useStyles();
     const [update, setUpdate] = useState();
 
     // useEffect(() => {
@@ -32,7 +38,7 @@ const CustomCard = props => {
 
     useEffect(() => {
         setTimeout(() => {
-            return setUpdate(formatDuration((finTime - currentTime) /1000))
+            return setUpdate(formatDuration(timeLeft /1000))
         }, 1000)
     },[update])
 
@@ -61,6 +67,14 @@ const CustomCard = props => {
     //         break;
     //     }
     // }
+    const timeLeft = finTime - currentTime;
+
+    const className = () => (
+        300000 > (timeLeft) ? classes.red : classes.green
+    );
+
+    date.filterTime = timeLeft ;
+
 
     return (
         <div>
@@ -68,7 +82,9 @@ const CustomCard = props => {
             <br/>
             Время обновления { new Date(finTime).toString().slice(15, 25) }
             <br/>
-            Осталось до начисления { update }
+            <span>
+                Осталось до начисления <span className={ className() }>{ update }</span>
+            </span>
         </div>
     )
 }

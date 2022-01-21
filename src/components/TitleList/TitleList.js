@@ -11,11 +11,15 @@ const useStyles = makeStyles(theme => styles(theme));
 const TitleList = () => {
     const classes = useStyles();
 
+    const className = () => {
+        return classes.red
+    };
+
     const list = () => {
         return dates.map(date => {
             if (date.timeAdd > 0) {
                 return (
-                <li key={ date.id } >
+                <li className={ classes.li } key={ date.id } >
                     <CustomCard date={ date } />
                 </li>
                 )
@@ -29,6 +33,7 @@ const TitleList = () => {
     const onClick2 = () => {
         console.log(1642718941617 + 180000 + 33000);
     }
+
 
     return (
         <div className={ classes.list }>

@@ -1,10 +1,12 @@
 const styles = theme => ({
     list: {
-        background: 'red',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-    }
+    },
+    li: {
+        paddingBottom: 20,
+    },
 })
 
 export default styles;
