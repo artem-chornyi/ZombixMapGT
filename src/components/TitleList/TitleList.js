@@ -10,20 +10,15 @@ const useStyles = makeStyles(theme => styles(theme));
 
 const TitleList = () => {
     const classes = useStyles();
-
-    const className = () => {
-        return classes.red
-    };
+    const [time, setTime] = useState(0);
 
     const list = () => {
         return dates.map(date => {
-            if (date.timeAdd > 0) {
-                return (
-                <li className={ classes.li } key={ date.id } >
-                    <CustomCard date={ date } />
-                </li>
-                )
-            }
+            return (
+            <li className={ classes.li } key={ date.id } >
+                {date.timeAdd > 0 ? <CustomCard date={ date } /> : 'error ' + date.id }
+            </li>
+            )
         })
     }
 
@@ -31,7 +26,10 @@ const TitleList = () => {
         console.log(Date.now() );
     }
     const onClick2 = () => {
-        console.log(1642776926759 + 600000 + 32000);
+        console.log(1643392960388 + 300000 + 50000);
+    }
+    const onChange = ({target}) => {
+        setTime(target.value * 60000);
     }
 
 
@@ -44,6 +42,8 @@ const TitleList = () => {
             <button onClick={ onClick2 } >
                 test 2
             </button>
+            <input onChange={ onChange }type=""/>
+            {time}
             <ul>
                 {list()}
             </ul>
