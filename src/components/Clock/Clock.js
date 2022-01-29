@@ -10,7 +10,7 @@ const Clock = ({fixTime}) => {
 
     return (
     <p>
-        {fixTime ? 'Time in Ukrainian:' : 'Current time:'}
+        {fixTime ? 'Time in Ukraine:' : 'Current time:'}
         {' '}
         {fixTime ? new Date(timeInUkrainian).toLocaleTimeString() : time}
     </p>
