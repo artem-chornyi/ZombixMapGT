@@ -5,12 +5,12 @@ const Clock = ({fixTime}) => {
     const timeInUkrainian = Date.now() - (fixTime * 3600000)
 
     useEffect(() => {
-        setInterval(() => setTime(new Date().toLocaleTimeString()))
-    },[])
+        setTimeout(() => setTime(new Date().toLocaleTimeString()), 1000)
+    },[time])
 
     return (
     <p>
-        {fixTime ? 'Time in Ukraine:' : 'Current time:'}
+        {fixTime ? 'Время в Украине:' : 'Текущее время:'}
         {' '}
         {fixTime ? new Date(timeInUkrainian).toLocaleTimeString() : time}
     </p>
