@@ -57,6 +57,16 @@ const TitleList = () => {
                         {date.timeAdd > 0 ? <CustomCard date={ date }/> : 'error ' + date.id }
                     </li>
                     )
+            } else {
+                return (
+                    <div>
+                        error {date.id}
+                        error {date.id}
+                        error {date.id}
+                        error {date.id}
+                        error {date.id}
+                    </div>
+                )
             }
             
         })
@@ -66,7 +76,7 @@ const TitleList = () => {
         console.log(Date.now() );
     }
     const onClick2 = () => {
-        console.log(1643392960388 + 300000 + 50000);
+        console.log(1643653065843 + 60000 + 35000);
     }
     const onClick3 = () => {
         localStorage.setItem('currentTime', JSON.stringify(localStor))
