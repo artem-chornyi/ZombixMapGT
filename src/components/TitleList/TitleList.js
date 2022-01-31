@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { CustomCard, Clock } from '..';
 import dates from '../dates';
 import styles from './styles';
@@ -12,19 +12,52 @@ const TitleList = () => {
     const classes = useStyles();
     const [time, setTime] = useState('');
     const [ localStor, setLocalStor ] = useState([]);
+    const [filterDate, setFilterDate] = useState([]);
 
     const local = localStorage.getItem('currentTime');
-    
+
+    useEffect(() => {
+        setTimeout(() => {
+            const newDates = dates.map(date => {
+                const currentTime = local ? Date.now() - (JSON.parse(local) * 3600000) : Date.now();
+                const timeUpdate = date.timeUpdate + date.error;
+                let timeAdd = date.timeAdd;
+                let countUpdate = 0;
+
+
+                for (; timeAdd < currentTime ; countUpdate++ ) {
+                    timeAdd = timeAdd + timeUpdate;
+                }
+
+                // const time = currentTime - date.timeAdd;
+                // const countUpdate = Math.ceil((time) / date.timeUpdate);
+
+                const finTime = date.timeAdd + (timeUpdate * countUpdate);
+
+                const timeLeft = finTime - currentTime;
+
+                return {
+                    ...date,
+                    filterTime: timeLeft,
+                }
+            })
+            newDates.sort((date1, date2) => date1.filterTime - date2.filterTime)
+            setFilterDate(newDates)
+    }, 1000)
+    },[filterDate])
+
+
+
 
     const list = () => {
-        return dates.map(date => {
-            // if (date.id === 5) {
+        return filterDate.map(date => {
+            if (date.timeAdd > 0) {
                 return (
                     <li className={ classes.li } key={ date.id } >
-                        {date.timeAdd > 0 ? <CustomCard date={ date } fixTime={ JSON.parse(local) || null } /> : 'error ' + date.id }
+                        {date.timeAdd > 0 ? <CustomCard date={ date }/> : 'error ' + date.id }
                     </li>
                     )
-            // }
+            }
             
         })
     }
@@ -45,6 +78,8 @@ const TitleList = () => {
     const onChange2 = ({target}) => {
         setLocalStor(target.value)
     }
+
+    
 
 
     return (

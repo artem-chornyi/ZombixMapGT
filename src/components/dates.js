@@ -371,6 +371,7 @@ const dates = [
         timeUpdate: timeToUpdate,
         error: error,
         timeAdd: 1642776977059,
+        filterTime: 0,
     },
     {
         id: 54,
@@ -447,6 +448,7 @@ const dates = [
         timeUpdate: timeToUpdate,
         error: error,
         timeAdd: 0,
+        filterTime: 0,
     },
     {
         id: 65,
